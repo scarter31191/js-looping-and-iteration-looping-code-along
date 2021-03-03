@@ -35,12 +35,25 @@ We'll encounter for loops again when we learn about iterating
 through object literals.
 */
 
-const names = [ 'Lisa', 'Kaitlin', 'Jan' ]
 
-function writeCards(names,birthday) {
-    for (let i = 0; i < names.length; i++) {
-        console.log(`Thank you, ${names[i]}, for the wonderful surprise gift!`);
+function writeCards(names, eventName) {
+    let thankYou = []
+    for (let i = 0; i < names.length; i++) { 
+       thankYou.push(`Thank you, ${names[i]}, for the wonderful ${eventName} gift!`);
     }
+    return thankYou
 }
 
-console.log(writeCards(names));
+let names = ['Steve', 'Joe', 'John']
+let eventName = ['Birthday']
+
+console.log(writeCards(names,eventName))
+
+function countDown() {
+    for (let i = 10; i >= 0; i--) {
+        console.log(i)
+    }
+
+}
+
+console.log(countDown(10))
